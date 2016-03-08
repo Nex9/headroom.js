@@ -1,6 +1,6 @@
 /*!
  * headroom.js v0.7.0 - Give your page some headroom. Hide your header until you need it
- * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/headroom.js
+ * Copyright (c) 2016 Nick Williams - http://wicky.nillia.ms/headroom.js
  * License: MIT
  */
 
@@ -29,7 +29,7 @@
           options[key] = scope[key] || Headroom.options[key];
         });
         if (options.scroller) {
-          options.scroller = angular.element(options.scroller)[0];
+          options.scroller = document.querySelector(options.scroller);
         }
         var headroom = new Headroom(element[0], options);
         headroom.init();
